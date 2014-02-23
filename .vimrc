@@ -1,8 +1,32 @@
 set nocompatible
-filetype on
+set ts=4
+filetype off
 set ruler			" affiche la position courante au sein du fichier
-set autoindent		" indentation automatique avancée
-set smartindent		" indentation plus intelligente
+"set autoindent		" indentation automatique avancée
+"set smartindent		" indentation plus intelligente
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" alternatively, pass a path where Vundle should install bundles
+"let path = '~/some/path/here'
+"call vundle#rc(path)
+
+
+" My Bundles here:
+" "
+" " original repos on github
+Bundle 'gmarik/vundle'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'scrooloose/nerdtree'
+" vim-scripts repos
+Bundle 'taglist.vim'
+" scripts not on GitHub
+Bundle 'git://git.wincent.com/command-t.git'
+
+
+filetype plugin indent on   " required
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "taglist plugin
