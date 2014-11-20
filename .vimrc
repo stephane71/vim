@@ -8,10 +8,10 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'gmarik/Vundle.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " My Plugins here:
 """"""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'gmarik/vundle'
 Plugin 'mattn/emmet-vim'
 Plugin 'marijnh/tern_for_vim'
 
@@ -24,13 +24,6 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 	nnoremap <silent> <F9> :NERDTreeToggle<CR>
 	map <tab> gt
-
-Plugin 'taglist.vim'
-	nnoremap <silent> <F8> :TlistToggle<CR>
-	set statusline=%<%f%=%([%{Tlist_Get_Tagname_By_Line()}]%)
-	let Tlist_Exit_OnlyWindow = 1		" vim se ferme si il reste uniquement la fenêtre des tags
-	let Tlist_Process_File_Always = 1	" activation permanente du plugin pour la barre de statut
-	let Tlist_Use_Right_Window = 1		" affiche les tags sur le côté droit de l'écran
 
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
@@ -68,6 +61,9 @@ Plugin 'https://github.com/Lokaltog/vim-distinguished'
 
 Plugin 'szw/vim-ctrlspace'
 	set hidden
+
+Plugin 'scrooloose/syntastic'
+let g:syntastic_check_on_open=1
 
 call vundle#end()
 filetype plugin indent on   " détecter le type de fichiers 
