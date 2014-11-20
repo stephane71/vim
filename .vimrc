@@ -63,7 +63,8 @@ Plugin 'szw/vim-ctrlspace'
 	set hidden
 
 Plugin 'scrooloose/syntastic'
-let g:syntastic_check_on_open=1
+	" npm install -g jshint
+	let g:syntastic_check_on_open=1
 
 call vundle#end()
 filetype plugin indent on   " détecter le type de fichiers 
