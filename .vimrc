@@ -66,6 +66,11 @@ Plugin 'scrooloose/syntastic'
 	" npm install -g jshint
 	let g:syntastic_check_on_open=1
 
+"Plugin 'mustache/vim-mustache-handlebars'
+"	let g:mustache_abbreviations = 1
+
+Plugin 'airblade/vim-gitgutter'
+	
 call vundle#end()
 filetype plugin indent on   " détecter le type de fichiers 
 
