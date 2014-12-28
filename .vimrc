@@ -15,12 +15,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'marijnh/tern_for_vim'
 
-Plugin 'Lokaltog/vim-easymotion'
-	" find {char} to the right
-	map _s <Plug>(easymotion-s) 
-	" beginning of word forward
-	map _f <Plug>(easymotion-w)
-
 Plugin 'scrooloose/nerdtree'
 	nnoremap <silent> <F9> :NERDTreeToggle<CR>
 	map <tab> gt
@@ -39,8 +33,11 @@ Plugin 'scrooloose/nerdcommenter'
 """"""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
-Plugin 'nathanaelkane/vim-indent-guides'
+"Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'maksimr/vim-jsbeautify'
+map <c-f> :call JsBeautify()<cr>
 
+" automatic closing of quotes, parenthesis, brackets, etc.,
 Plugin 'Raimondi/delimitMate'
 	imap <C-c> <CR><Esc>O
 
