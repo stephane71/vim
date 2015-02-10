@@ -12,34 +12,47 @@ Plugin 'gmarik/Vundle.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " My Plugins here:
 """"""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'mattn/emmet-vim'
-Plugin 'marijnh/tern_for_vim'
+"Plugin 'Lokaltog/vim-easymotion'
+	"" find {char} to the right
+	"map _s <Plug>(easymotion-s) 
+	"" beginning of word forward
+	"map _f <Plug>(easymotion-w)
 
+"Plugin 'kien/ctrlp.vim'
+
+" emmet for vim: http://emmet.io/ http://mattn.github.io/emmet-vim
+Plugin 'mattn/emmet-vim'
+" Tern plugin for Vim
+Plugin 'marijnh/tern_for_vim'
+" A tree explorer plugin for vim
 Plugin 'scrooloose/nerdtree'
 	nnoremap <silent> <F9> :NERDTreeToggle<CR>
 	map <tab> gt
-
+" Vim plugin for the Perl module / CLI script 'ack'
 Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline' " pretty  status/tabline 
+" pretty  status/tabline 
+Plugin 'bling/vim-airline' 
 	let g:airline#extensions#tabline#enabled = 1
 	let g:airline#extensions#tabline#left_sep = ' '
 	let g:airline#extensions#tabline#left_alt_sep = '|'
+" Vim plugin for intensely orgasmic commenting
 Plugin 'scrooloose/nerdcommenter'
+" Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
+Plugin 'Raimondi/delimitMate'
+	imap <C-c> <CR><Esc>O
+" Vim Workspace Controller
+Plugin 'szw/vim-ctrlspace'
+	set hidden
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
+Plugin 'airblade/vim-gitgutter'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " javascript specifics bundles 
 " voir http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 """"""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
-"Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'maksimr/vim-jsbeautify'
-map <c-f> :call JsBeautify()<cr>
-
-" automatic closing of quotes, parenthesis, brackets, etc.,
-Plugin 'Raimondi/delimitMate'
-	imap <C-c> <CR><Esc>O
+"Plugin 'pangloss/vim-javascript'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 Plugin 'Valloric/YouCompleteMe'
 	" These are the tweaks I apply to YCM's config, you don't need them but they
@@ -56,21 +69,14 @@ Plugin 'https://github.com/Lokaltog/vim-distinguished'
 	set background=dark
 	colorscheme distinguished
 
-Plugin 'szw/vim-ctrlspace'
-	set hidden
-
 Plugin 'scrooloose/syntastic'
 	" npm install -g jshint
 	let g:syntastic_check_on_open=1
-
-"Plugin 'mustache/vim-mustache-handlebars'
-"	let g:mustache_abbreviations = 1
-
-Plugin 'airblade/vim-gitgutter'
 	
 call vundle#end()
 filetype plugin indent on   " détecter le type de fichiers 
 
+"au FileType javascript call JavaScriptFold()
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
