@@ -46,6 +46,11 @@ Plugin 'szw/vim-ctrlspace'
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
 Plugin 'airblade/vim-gitgutter'
 
+" Beautifier for javascript
+Plugin 'einars/js-beautify'
+Plugin 'maksimr/vim-jsbeautify'
+	"let g:editorconfig_Beautifier=expand("<sfile>:p:h").'/.editorconfig'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " javascript specifics bundles 
 " voir http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
