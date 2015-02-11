@@ -12,13 +12,6 @@ Plugin 'gmarik/Vundle.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " My Plugins here:
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Plugin 'Lokaltog/vim-easymotion'
-	"" find {char} to the right
-	"map _s <Plug>(easymotion-s) 
-	"" beginning of word forward
-	"map _f <Plug>(easymotion-w)
-
-"Plugin 'kien/ctrlp.vim'
 
 " emmet for vim: http://emmet.io/ http://mattn.github.io/emmet-vim
 Plugin 'mattn/emmet-vim'
